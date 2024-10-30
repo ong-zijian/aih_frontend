@@ -1,0 +1,10 @@
+Flask
+flask-cors
+langchain
+langchain-community
+faiss-cpu
+openai
+numpy
+langchain-openai
+joblib
+scikit-learn

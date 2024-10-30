@@ -1,0 +1,414 @@
+﻿An easy step-by-step digibank user guide:
+
+
+Section 1: Get Started
+With your POSB Payroll Account, enjoy an easier way to bank with quicker access to all banking services you need. Banking online is simple with POSB digibank.
+
+
+Step 1: Activate Account
+In your ATM Card mailer, you should receive a POSB ATM card. Your POSB Payroll Account Number can be found at the bottom left of the mailer.
+
+
+Activate your POSB Payroll Account via SMS
+SMS Activate <space> Last 4 digits of card to 77767
+*If you encounter an error while activating your card via SMS, your mobile number requires Proof of Mobile Ownership from your telco before it can be updated by the bank.
+
+
+Step 2: Download & Register Mobile App
+Update/register your personal particulars
+Before you download any mobile banking app, please make sure the following details are registered and/or updated with the bank:
+
+
+* Mobile Number
+* Mailing Address
+* Email Address
+
+
+If you need to update your mobile number and mailing address, you can do so at any AXS machine:
+
+
+1. Select ‘POSB’
+2. Select ‘Services for Work Permit Account Holders’
+3. Select ‘Update Mobile Number Request’ and follow the instructions.
+*For a successful update request, a confirmation SMS will be sent to you after 2 working days.
+
+
+Download and register for POSB digibank
+Enjoy the easiest, quickest, smartest way to bank at your fingertips, when you have all the banking services you need in one app.
+
+
+Download POSB digibank via App Store, Google Play or Huawei App Gallery
+
+
+1. Open App and choose ‘More’
+2. Select ‘New to Digibank’
+3. Enter your Identity Type, Identity Number and Date of Birth
+4. Enter your ATM Card Number and ATM PIN
+5. Create a user ID & PIN. Enter your registered mobile number, email address and confirm your mailing address.
+6. Successful registration
+
+
+
+
+Set up Digital Token
+
+
+1. Select ‘SET UP NOW’ when the screen appears with ‘Set Up Digital Token’
+2. Enter the 6-digit OTP sent to your email inbox.
+3. Enter the 6-digit OTP sent to your registered mobile number via SMS.
+4. You have successfully set-up when the screen shows ‘Your digital token is ready to use!’
+*After setting up the digital token, all OTPs will be sent to your registered mobile number. Physical token will not be needed.
+
+
+
+
+Section 2: Send Money Home with DBS Remit
+With DBS Remit, send money back home to your loved ones easily. Plus, DBS offers one of the most competitive foreign exchange rates.
+
+
+Step 1: Check Rates with POSB digibank
+
+
+1. Select ‘Check Rates’
+2. Tap ‘Select’ under Principal Amount
+3. Select ‘Singapore Dollar’
+4. Tap ‘Select’ under Converted Amount
+5. Select the currency you want to convert to
+6. Select ‘Calculate’
+7. Tap ‘Principal Amount’ and key in the amount to convert
+8. Converted amount will be shown
+
+
+Step 2: Add Overseas Payee
+
+
+1. Select ‘Overseas Transfer
+2. Tap ‘Add Recipient Now’
+3. Key in the first few letters of the payee’s country of residence
+4. Select the country
+5. Select currency to send in and select ‘Transfer to Account’ under ‘Select Transfer Method’. Tap ‘Next’
+6. Fill in payee’s bank account information and select ‘Next’
+7. Confirm payee details and tap ‘Add Recipient Now’
+8. Payee has been added. Select ‘Make a Transfer’ to start sending money.
+
+
+Step 2A: Add Payee (India only)
+
+
+1. Select ‘Overseas Transfer
+2. Tap ‘Add Recipient Now’
+3. Select ‘India’
+4. Select ‘INR’
+5. Tap ‘Search IFSC Code’
+6. Select the payee’s bank
+7. Select the state 
+8. Select the city
+9. Select the Branch
+10. Confirm the bank details and select ‘Next’
+11. Enter the Account Number, Full Name of Payee as per bank records, and Payee’s address. Tap ‘Next.
+12. Confirm payee details and tap ‘Add Recipient Now’
+13. Enter your digibank login PIN
+14. Payee has been added. Select ‘Make a Transfer’ to start sending money
+
+
+Step 3: Start to Remit with POSB digibank
+
+
+1. Select ‘Overseas Transfer
+2. Select Payee you wish to transfer to.
+3. Key in amount to send. Tap ‘Next’
+4. Select type of account. (Current/Checking is used as an example).
+5. Tap ‘Enter recipient’s phone no.’ to key in payee’s phone number
+6. Tap ‘Purpose of Transfer’
+7. Select the purpose of Transfer. (‘Family Expenses/Savings is used as an example).
+8. Check details and tap ‘Next’
+9. Confirm payee details and select ‘Transfer’
+10. Successful transfer! You can choose to share transfer details or return to home page.
+
+
+Section 3: Send Money Locally
+With POSB digibank, enjoy quicker ways to send money via Local Transfer and PayNow within Singapore. There’s no need to withdraw cash at the ATM.
+
+
+Section 3A: Make a Local Transfer
+With Local Transfer, easily send money to your friends and family within Singapore.
+
+
+Step 1: Add Payee
+
+
+1. Select ‘Local Transfer’
+2. Select ‘Add Local Recipient’
+3. Select ‘Bank Account’
+4. Enter Payee’s Name. Select Payee’s Bank and enter payee’s bank account number. Tap ‘Next’.
+5. Check payee details and select ‘Add Recipient Now’
+6. Enter the One-Time Password sent to your registered email address
+7. Payee has been added. Select ‘Make a Transfer’ to start sending money.
+
+
+
+
+Step 2: Start to Transfer
+
+
+1. Select ‘Local Transfer’
+2. Select the payee you wish to transfer to
+3. Select the Account you wish to transfer from. Enter the Amount you wish to send. Tap ‘Next’ to review transfer details.
+4. Review transfer details. Tap ‘Transfer Now’
+5. Successful transfer! You can choose to share transfer details or return to home page.
+
+
+Section 3B: Make a PayNow Transfer
+With PayNow, quickly send money to your friends and family via FAST that allows you to transfer SGD funds almost instantly from one bank to another within Singapore.
+
+
+One-time Transfer (without adding PayNow Recipient)
+
+
+1. Select ‘PayNow’
+2. Select type of proxy. For this example, we will use ‘Mobile No.’. Tap ‘Mobile No’.
+3. Key in the name of your payee as registered in your contacts. You can also key in the mobile number.
+4. Confirm the payee nickname and tap ‘Make a transfer’
+5. Enter the amount you wish to send. You can choose to add comments to payee. Tap ‘Next’. 
+6. Check the transfer details and tap ‘Transfer Now’ to complete the transfer.
+7. You have completed your PayNow Transfer! You can choose to share transfer details with your payee.
+*Payee must have a PayNow Profile for transfer to be successful
+*Transfers are immediate
+*PayNow transfer limit is the same as your daily local limit
+
+
+Alternatively, Transfer with PayNow Recipient
+
+
+Step 1: Add a PayNow Recipient
+
+
+1. Select ‘PayNow’
+2. Select ‘Recipients’ and tap ‘Add PayNow Recipient’
+3. Select type of proxy. For this example, we will use ‘Mobile No’. Tap ‘Mobile No’.
+4. Enter the payee’s mobile number
+5. Confirm payee’s nickname and tap ‘Next’ 
+6. Confirm payee details and tap ‘Add Recipient Now’
+7. Follow the 2-Factor Authentication instructions to complete the request
+8. You have successfully added your PayNow Payee!
+
+
+*Payee must have a PayNow profile to be successfully added
+*You may add up to a maximum of 50 payees.
+
+
+Step 2: Transfer to PayNow Recipient
+
+
+1. Select ‘PayNow’
+2. Select ‘Recipients’ 
+3. Select the payee you wish to send money to
+4. Select the account you wish to send money from
+5. Enter the amount you wish to send. You can choose to add comments to payee. Tap ‘Next’
+6. Check the transfer details and tap ‘Transfer Now’ to complete the transfer.
+7. You have completed your PayNow Transfer! You can choose to share transfer details with your payee.
+*Transfers are immediate
+*PayNow transfer limit is same as your daily local limit
+
+
+Section 3C: Scan & Pay
+
+
+With Scan & Pay, you can easily make payments at places all over Singapore. Simply scan the NETS, SG and/or PayNow QR code via POSB digibank.
+
+
+1. Select ‘Scan & Pay’
+2. Select ‘Scan’ and scan the QR code
+3. Confirm the amount to pay. You can choose to add comments to payee. Tap ‘Pay Now’
+4. Your Scan & Pay Payment is complete!
+
+
+Section 4: Top up Mobile Prepaid
+Top up your prepaid SIM cards anytime, anywhere via POSB digibank.
+
+
+Top up Mobile Prepaid
+
+1. Select ‘Top Up Prepaid Card’
+2. Tap ‘Select a prepaid mobile no.’
+3. Enter your mobile no. Select your mobile no. when it appears.
+4. Tap ‘Select Mobile Operator’
+5. Select the Mobile Operator you are using
+6. Check your details and tap ‘Next’
+7. Tap ‘Top-up Option’
+8. Select amount you would like to top up
+9. Check top up details and tap ‘Next’
+10. Check all details and tap ‘Top Up Now’
+11. Your top up is complete!
+
+
+Section 5: Other App Functions
+With POSB digibank, easily check account transaction history, replace your debit card and update your bank account particulars. Plus, enjoy convenient access to your MWC/CDE membership benefits and services!
+
+
+Check Transaction History
+
+
+1. Select ‘More’
+2. Tap ‘Transaction History’
+3. Tap ‘Deposit Account’
+4. Select the amount you wish to view, time range and tap ‘show’
+5. You can now scroll to view your transaction history.
+
+
+Access MWC/CDE digital Membership Card
+
+
+1. Select ‘More’
+2. Select ‘My MWC/CDE card’
+3. You now have access to your MWC/CDE digital membership card!
+
+*The MWC/CDE membership and its benefits are handled by MWC and CDE. For more details, you may contact MWC and CDE. 
+MWC Helpline: 6536 2692 or website: http://www.mwc.org.sg/wps/portal/mwc/home/services/mwcposbmembership
+CDE Helpline: 1800 2255 233 or website:
+www.cde.org.sg/cdemembership
+
+
+Update Mailing Address
+
+
+   1. Select ‘More’
+   2. Under ‘Your Profile’, select ‘Update Contact Details’
+   3. Select ‘Mailing Address’
+   4. Read through the Important Notes and tap ‘Next’
+   5. Tap ‘Update’
+   6. Enter your postal code and tap ‘Find Address’
+   7. Enter your unit number (if there is), and tap ‘Save’
+   8. Select if your mailing address is the same as residential address. Tap ‘Next’
+   9. Check your details and tap ‘Update Address Now’
+   10. You have successfully updated your address.
+
+
+Update Mobile Number
+
+
+   1. Tap ‘More’
+   2. Under ‘Your Profile’, select ‘Update Contact Details’
+   3. Select ‘Personal & Contact Details’
+   4. Under your ‘Email Address’, tap ‘Change’
+   5. Enter your ‘Mobile No.’ and tap ‘Save’
+   6. Scroll down to the bottom of the page and tap ‘Confirm’
+   7. Check your details and tap ‘Confirm’
+   8. Select ‘Ok’ to proceed with the update
+
+
+Update Email Address
+
+
+   1. Tap ‘More’
+   2. Under ‘Your Profile’, select ‘Update contact Details’
+   3. Select ‘Personal & Contact Details’
+   4. Under your ‘Email Address’, tap ‘Change’
+   5. Enter your new email address and tap ‘Save’
+   6. Scroll down to the bottom of the page and tap ‘Confirm’
+   7. Check your details and tap ‘Confirm’
+   8. Your email address is now updated!
+
+
+Replace Card (Damaged Card)
+
+
+   1. Tap ‘More’
+   2. Under ‘Other Services’, select ‘Replace/Block Card’
+   3. Select ‘My Card is Damaged’
+   4. Select the card which is spoilt
+   5. Enter your name to be on the new card and tap ‘Next’
+   6. Check that details including mailing address is correct and tap ‘Replace Card’
+   7. You will receive your new card in 3 to 5 working days.
+*Please make sure that your mailing address is updated. If mailing address is not updated, please update mailing address first.
+
+
+Replace Card (Lost Card)
+
+
+   1. Tap ‘More’
+   2. Under ‘Other Services’, select ‘Replace/Block Card’
+   3. Select ‘My Card is Lost’
+   4. Tap ‘Proceed’ to block the lost card.
+   5. Select the card which is lost
+   6. Tap ‘Block Now’ to block the lose card.
+   7. Tap ‘Replace Card Now’
+   8. Enter your name to be on the new card and tap ‘Next’
+   9. Check that details including mailing address is correct and tap ‘Replace Card’
+   10. You will receive your new card in 3 to 5 working days.
+*Please make sure that your mailing address is updated. If mailing address is not updated, please update mailing address.
+
+
+Contact POSB if you have any questions:
+
+
+Line 1: 8332 6829
+Line 2: 8332 6830
+Line 3: 8332 6831
+Line 4: 8332 6832
+
+
+Operating hours: Mondays to Fridays – 9am to 5pm, Saturdays – 9am to 1pm
+Lines are closed on Sundays & Public Holidays
+
+
+
+
+How to reset digibank PIN
+There are various channels which you may reset digibank PIN with us. The most convenient method would be via digibank mobile.
+Digibank mobile:
+   1. Launch your digibank Mobile App and select Log In.
+   2. Tap Forgot your PIN?, and indicate your Identity Type, Identity Number and Date of Birth.
+   3. Tap Next and select the option that you like to identify yourself via:
+   1. Debit / ATM Card; OR
+   2. DBS Secure Device (Token)
+   4. After identification, Enter New PIN and tap on Set New PIN to complete the reset of your digibank PIN.
+
+
+How to check account balance
+4 general methods below
+
+
+Digibank Mobile:
+   1. Log in to digibank mobile using your Touch/Face ID or digibank User ID & PIN.
+   2. Your Account Balance will be displayed on the homepage.
+   3. Activate Peek Balance by tapping More and selecting App & Security Settings, then choose Peek Balance.
+   4. Toggle the switch to activate and select the account for Peek Balance, then tap Save.
+   5. You can tap and hold to Peek Balance on your preferred account without logging in to digibank mobile.
+Digibank Online (Website):
+   1. Log in to internet-banking.dbs.com.sg.
+   2. Complete the authentication process.
+   3. Your account balance will be displayed on the homepage.
+Phone Banking:
+   1. Dial 1800 111 1111 (from Singapore) or (+65) 6327 2265 (from overseas).
+   2. For English, press 1; for Mandarin, press 2.
+   3. Enter your NRIC, Debit, or Credit Card Number followed by # to proceed.
+   4. Follow the steps for SMS OTP to proceed.
+   5. Select Deposit Account Related Services.
+   6. Press 1 to listen to your account balance(s).
+DBS/POSB ATM:
+   1. Insert your ATM/Debit/Credit Card and key in your PIN.
+   2. Select Balance Inquiry.
+   3. Select your account type.
+   4. Your account balance will be reflected.
+   5. Select End and remove your ATM card.
+
+
+
+
+Troubleshoot
+App not loading or keeps crashing:
+   1. Check if the App is updated to the latest version.
+   1. digibank mobile: Download the latest digibank mobile app.
+   2. DBS Paylah: Click the link below to download the latest app version.
+   2. Check if Mobile Phone Operating Systems (OS) are updated to the latest version.
+   1. You can choose to enable auto OS updates or follow these steps:
+   2. iOS devices: Go to Settings > General > Software Update.
+   3. Android devices: Go to Settings > Software Update.
+   3. Restart your phone.
+   1. If you are still facing the same issue after restarting, delete your app and reinstall the latest app version.
+
+
+Exceed the number of login attempts:
+
+   1. Please reset your PIN to reactivate your account. Learn more about how to Reset digibank PIN.

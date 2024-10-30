@@ -14,6 +14,7 @@ const Chatbot: React.FC = () => {
   const [sendUserResponse, setSendUserResponse] = useState<string>("");
   const [language, setLanguage] = useState<string>("en");
   const [options, setOptions] = useState<string>("");
+  //const [resetChat, setResetChat] = useState(false); 
 
   // setting next step when there's response and option click
   const setNextStep = (response: string) => {
@@ -23,11 +24,11 @@ const Chatbot: React.FC = () => {
     setUserResponse("");
 
     if (options!==""){
-      if (options==="How to use digibank"){
+      if (options==="How to use digibank" || options==="如何使用数字银行" || options==="டிஜிபேங்கை எப்படி பயன்படுத்துவது"){
         askQuestion(response).then((response) => {
           setBotResponse(response);
         });
-      } else if (options==="How to spot scams"){
+      } else if (options==="How to spot scams" || options==="如何识别骗局" || options==="மோசடிகளை எப்படி கண்டறியுவது"){
         askScamQuestion(response).then((response) => {
           setBotResponse(response);
         });
@@ -64,11 +65,28 @@ const Chatbot: React.FC = () => {
     setLanguage(e.target.value);
   };
 
+  // const handleResetChat = () => {
+  //   //trigger a click event that passes prop resetChat and informs chats.tsx to reset the chat
+  //   setResetChat(true);
+  // }
+
+  //  // Reset state back to false after useEffect has processed it
+  //  useEffect(() => {
+  //   if (resetChat) {
+  //     // Here you can reset your other state if necessary
+  //     setResetChat(false); // Reset the state after processing
+  //   }
+  // }, [resetChat]);
+
+
   return (
     <Box>
       <Box>
         <Typography variant="h4" align="center" sx={{color: "#393e46", mt: 2}}>Chatbot</Typography>
       </Box>
+      {/* <Box>
+        <Button onClick={handleResetChat} variant="contained" sx={{background: "#393e46", color: "#f2a365", borderRadius: 1, mt: 2, "&:hover": {opacity: 0.8}}}>Reset Chat</Button>
+      </Box> */}
       <Box>
         <Typography variant="h6" align="center" sx={{ color: "#393e46", mt: 2 }}>
           Choose a language
@@ -88,7 +106,7 @@ const Chatbot: React.FC = () => {
       <Box sx={{display: "flex", justifyContent: "center", alignItems: "center", height: "100vh"}}>
         <Box 
           sx={{
-            width: "80vw", height: "60vh", display: "flex", 
+            width: "70vw", height: "80vh", display: "flex", 
             flexDirection: "column", justifyContent: "space-between", 
             border: "0.5px solid #d8d8d8", 
             p: 2, borderRadius: 2
@@ -100,6 +118,7 @@ const Chatbot: React.FC = () => {
             sendUserResponse={sendUserResponse}
             optionClick={optionClick}
             language={language}
+            //resetChat={resetChat}
           />
           <form onSubmit={handleSubmit} style={{ display: 'flex', justifyContent: 'space-between' }}>
             <TextField

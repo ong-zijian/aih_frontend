@@ -9,6 +9,7 @@ interface Props {
   sendUserResponse: string;
   optionClick: (option: string) => void; 
   language: string;
+  //resetChat: boolean;
 }
 
 interface MessagesInfo {
@@ -41,10 +42,17 @@ const Chats: React.FC<Props> = (props) => {
     ta: "அருமை! மோசடிகள் அல்லது ஃபிஷிங் பற்றி நீங்கள் என்ன தெரிந்து கொள்ள விரும்புகிறீர்கள்?"
   };
 
-  const options: string[] = [
-    "How to use digibank",
-    "How to spot scams"
-  ];
+  const options: { [key: string]: Array<string> } = {
+    en: ["How to use digibank", "How to spot scams"],
+    zh: ["如何使用数字银行", "如何识别骗局"],
+    ta: ["டிஜிபேங்கை எப்படி பயன்படுத்துவது", "மோசடிகளை எப்படி கண்டறியுவது"]
+  };
+
+  const endings: { [key: string]: string } = {
+    en: "Ask another question or select an option.",
+    zh: "提出另一个问题或选择一个选项。",
+    ta: "மற்றொரு கேள்வியை கேட்க அல்லது ஒரு விருப்பத்தைத் தேர்வு செய்க."
+  };
 
   // Initial message handling
   useEffect(() => {
@@ -59,22 +67,41 @@ const Chats: React.FC<Props> = (props) => {
     setInitialMessage(props.language);
   }, [props.language]);
 
+  // useEffect(() => {
+  //   if (props.resetChat) {
+  //     resetChatToInitialState(props.language);
+  //   }
+  // }, [props.resetChat]);
+
   const setInitialMessage = (language: string) => {
     const initialMessage = greetings[language] || greetings.en; // Fallback to English if language is not found
     setMessages([
       {
         purpose: "introduction",
         message: initialMessage,
-        options: options,
+        options: options[language] || options.en, // Fallback to English if language is not found
         sender: "bot",
       },
     ]);
   };
 
+  // Reset chat to the initial state when the language is changed
+const resetChatToInitialState = (language: string) => {
+  console.log("Resetting chat to initial state");
+
+  // First, clear the messages
+  setMessages([]);
+
+  // Then, after clearing, set the initial message with the new language
+  setTimeout(() => {
+    setInitialMessage(language); // Set the initial message in the selected language
+  }, 0); // Small delay to ensure the state is cleared first
+};
+
   // Handle user option click
   const handleOptionClick = (option: string) => {
     const greetingMessage =
-      option === "How to use digibank"
+      option === "How to use digibank" || option === "如何使用数字银行" || option === "டிஜிபேங்கை எப்படி பயன்படுத்துவது"
         ? greetingsDigibank[props.language] || greetingsDigibank.en
         : greetingsScams[props.language] || greetingsScams.en;
   
@@ -94,29 +121,34 @@ const Chats: React.FC<Props> = (props) => {
     // Call the optionClick prop with the clicked option
     props.optionClick(option);
   };
+
+  useEffect(() => {
+    resetChatToInitialState(props.language);
+  }, [props.language]);
   
-  // Push the user's response to messages if available and not already present
   useEffect(() => {
     if (props.sendUserResponse && !messages.some(msg => msg.message === props.sendUserResponse && msg.sender === "user")) {
-      setMessages((prevMessages) => [
+      setMessages(prevMessages => [
         ...prevMessages,
         { message: props.sendUserResponse, sender: "user" },
       ]);
     }
-  }, [props.sendUserResponse, messages]);
-
-  // Push the bot's answer if available and not already present
+    // Ensure that this useEffect runs only when sendUserResponse changes
+  }, [props.sendUserResponse]);
+  
   useEffect(() => {
     if (props.botResponse.answer && !messages.some(msg => msg.message === props.botResponse.answer && msg.sender === "bot")) {
-      setMessages((prevMessages) => [
+      setMessages(prevMessages => [
         ...prevMessages,
         {
-          message: props.botResponse.answer,
+          message: props.botResponse.answer + "\n\n" + endings[props.language] || endings.en, // Adding endings based on language
+          options: options[props.language] || options.en, // Adding options based on language
           sender: "bot",
         },
       ]);
     }
-  }, [props.botResponse, messages]);
+    // Ensure this only runs when the bot's response changes
+  }, [props.botResponse, props.language]);
 
   // Enable autoscroll after each message
   useEffect(() => {

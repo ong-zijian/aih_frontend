@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ScamCheckerChats from "./scamCheckerChats";
-import { Box, TextField, Button } from "@mui/material";
+import { Box, TextField, Button, Typography } from "@mui/material";
 import { predictScam } from "../axios/predictScam";
 
 interface ResponseBotObject {
@@ -60,34 +60,38 @@ const ScamChecker: React.FC = () => {
     };
 
   return (
-    <Box sx={{display: "flex", justifyContent: "center", alignItems: "center", height: "100vh"}}>
-      <Box 
-        sx={{
-          width: "80vw", height: "60vh", display: "flex", 
-          flexDirection: "column", justifyContent: "space-between", 
-          border: "0.5px solid #d8d8d8", 
-          p: 2, borderRadius: 2
-        }}
-      >
-        <ScamCheckerChats
-          userResponse={userResponse}
-          botResponse={botResponse}
-          sendUserResponse={sendUserResponse}
-          optionClick={optionClick}
-        />
-        <form onSubmit={handleSubmit} style={{ display: 'flex', justifyContent: 'space-between' }}>
-          <TextField
-            variant="outlined" value={userResponse} onChange={handleInputChange} placeholder="Write your questions here"
-            sx={{width: "92%",border: "0.5px solid #e5dfdf", borderRadius: 1,"&:focus": { outline: "none"},}}/>
-          <Button type="submit" 
-            sx={{background: "#e5dfdf", color: "#393e46",borderRadius: 1, b: 2,
-            "&:hover": {opacity: 0.8}}}>
-          Send</Button>
-        </form>
+    <Box>
+      <Box>
+        <Typography variant="h4" align="center" sx={{color: "#393e46", mt: 2}}>Scam Checker</Typography>
       </Box>
-      
+      <Box sx={{display: "flex", justifyContent: "center", alignItems: "center", height: "100vh"}}>
+        <Box 
+          sx={{
+            width: "70vw", height: "80vh", display: "flex", 
+            flexDirection: "column", justifyContent: "space-between", 
+            border: "0.5px solid #d8d8d8", 
+            p: 2, borderRadius: 2
+          }}
+        >
+          <ScamCheckerChats
+            userResponse={userResponse}
+            botResponse={botResponse}
+            sendUserResponse={sendUserResponse}
+            optionClick={optionClick}
+          />
+          <form onSubmit={handleSubmit} style={{ display: 'flex', justifyContent: 'space-between' }}>
+            <TextField
+              variant="outlined" value={userResponse} onChange={handleInputChange} placeholder="Write your questions here"
+              sx={{width: "92%",border: "0.5px solid #e5dfdf", borderRadius: 1,"&:focus": { outline: "none"},}}/>
+            <Button type="submit" 
+              sx={{background: "#e5dfdf", color: "#393e46",borderRadius: 1, b: 2,
+              "&:hover": {opacity: 0.8}}}>
+            Send</Button>
+          </form>
+        </Box>
+        
+      </Box>
     </Box>
-    
   );
 };
 

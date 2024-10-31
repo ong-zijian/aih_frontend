@@ -8,3 +8,4 @@ numpy
 langchain-openai
 joblib
 scikit-learn
+gunicorn

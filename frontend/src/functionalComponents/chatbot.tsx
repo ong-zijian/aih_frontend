@@ -34,6 +34,7 @@ const Chatbot: React.FC = () => {
         });
       }
     } else {  
+      setBotResponse({ answer: "Set initial message" });
       console.log("No options selected");
     }
   };

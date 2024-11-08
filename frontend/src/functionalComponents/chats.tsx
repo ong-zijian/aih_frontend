@@ -25,9 +25,9 @@ const Chats: React.FC<Props> = (props) => {
   const bodyRef = useRef<HTMLDivElement>(null);
 
   const greetings: { [key: string]: string } = {
-    en: "Hi there. Hope you have a nice day. Do you want to know more about how to use digibank or how to spot scams?",
-    zh: "你好。希望你今天过得愉快。您想了解如何使用数字银行还是如何识别骗局？",
-    ta: "அருமை! டிஜிபேங்க் பற்றி நீங்கள் என்ன தெரிந்து கொள்ள விரும்புகிறீர்கள்?"
+    en: "Hi there. Hope you have a nice day. Do you want to know more about how to use digibank or how to spot scams? \n\n Select an option below to continue.",
+    zh: "你好。希望你今天过得愉快。您想了解如何使用数字银行还是如何识别骗局？ \n\n 选择下面的选项继续。",
+    ta: "அருமை! டிஜிபேங்க் பற்றி நீங்கள் என்ன தெரிந்து கொள்ள விரும்புகிறீர்கள்? \n\n தொடர கீழே ஒரு விருப்பத்தைத் தேர்வு செய்க."
   };
 
   const greetingsDigibank: { [key: string]: string } = {
@@ -137,7 +137,18 @@ const resetChatToInitialState = (language: string) => {
   }, [props.sendUserResponse]);
   
   useEffect(() => {
-    if (props.botResponse.answer && !messages.some(msg => msg.message === props.botResponse.answer && msg.sender === "bot")) {
+    if (props.botResponse.answer && props.botResponse.answer === "Set initial message" && !messages.some(msg => msg.message === props.botResponse.answer && msg.sender === "bot")) {
+      const initialMessage = greetings[props.language] || greetings.en; 
+      setMessages(prevMessages => [
+        ...prevMessages,
+        {
+          message: initialMessage,
+          options: options[props.language] || options.en,
+          sender: "bot",
+        },
+      ]);
+    }
+    else if (props.botResponse.answer && !messages.some(msg => msg.message === props.botResponse.answer && msg.sender === "bot")) {
       setMessages(prevMessages => [
         ...prevMessages,
         {

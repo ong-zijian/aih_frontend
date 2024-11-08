@@ -7,7 +7,10 @@ from flask_cors import CORS
 from langchain_community.document_loaders import TextLoader
 from langchain.text_splitter import CharacterTextSplitter
 from langchain_openai import OpenAIEmbeddings  # Updated import
-from langchain.vectorstores import FAISS
+
+from langchain_community.vectorstores import FAISS
+
+#from langchain.vectorstores import FAISS
 from langchain.chat_models import ChatOpenAI
 from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationalRetrievalChain
@@ -26,27 +29,20 @@ label_mapping_inverse = {
     2: 'spam'
 }
 
-# Load the LangChain components
-def load_langchain_components(txt_file_path, faiss_index_path):
+def load_langchain_components(txt_file_path):
     # Load the data
-    txt_file_path = txt_file_path
     loader = TextLoader(file_path=txt_file_path, encoding="utf-8")
     data = loader.load()
 
-    # Split the character into chunks
+    # Split the text into chunks
     text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
     data = text_splitter.split_documents(data)
 
-    # Create the embedding class with the API key
-    embeddings = OpenAIEmbeddings(openai_api_key=os.environ['OPENAI_API_KEY'])  # Pass the API key
+    # Create the embedding class
+    embeddings = OpenAIEmbeddings(openai_api_key=os.environ['OPENAI_API_KEY'])
 
-    # Check if the FAISS index exists
-    try:
-        vectorstore = FAISS.load_index(faiss_index_path, embeddings)
-    except Exception as e:
-        print("Error loading index: ", e)
-        vectorstore = FAISS.from_documents(data, embeddings)
-        faiss.write_index(vectorstore.index, 'faiss_index.bin')
+    # Create FAISS index from scratch every time
+    vectorstore = FAISS.from_documents(data, embeddings)
 
     # Set up the language model and memory
     llm = ChatOpenAI(temperature=0.7, model_name="gpt-3.5-turbo")
@@ -62,9 +58,9 @@ def load_langchain_components(txt_file_path, faiss_index_path):
 
     return conversation_chain
 
-# Load components when the app starts
-conversation_chain = load_langchain_components('data/POSB_Digibank_Resource.txt', 'weights/faiss_index.bin')
-scam_phishing_conversation_chain = load_langchain_components('data/Scams_malware_phishing.txt', 'weights/faiss_index_scams_phishing.bin')
+# Load each set of components for each file path
+conversation_chain = load_langchain_components('data/POSB_Digibank_Resource.txt')
+scam_phishing_conversation_chain = load_langchain_components('data/Scams_malware_phishing.txt')
 
 @app.route('/ask', methods=['POST'])
 def ask():
@@ -72,7 +68,7 @@ def ask():
     if not query:
         return jsonify({"error": "Question is required."}), 400
 
-    full_query = "Given the query below, search for the answer and return. If the answer has only 1 answer, return the answer. Else if the answer has multiple answers, follow up with another question providing the options in numbers and await for the option to be selected, then give the answer in the next prompt. Return the answer back in the same language as the query. Query: " + query
+    full_query = "Given the query below, search for the answer and return. If the answer has only 1 answer, return the answer. Else if the answer has multiple answers, follow up with another question providing the options in numbers and await for the option to be selected, then give the answer in the next prompt. Return the answer back in the same language as the query. When giving long answers, give the short 2 sentence summary, create a h2 header then show full steps or detailed answers. Query: " + query
     result = conversation_chain({"question": full_query})
     answer = result["answer"]
 
@@ -85,8 +81,8 @@ def ask_scam_phishing():
     if not query:
         return jsonify({"error": "Question is required."}), 400
 
-    full_query = "Given the query below, search for the answer and return. Return the answer back in the same language as the query. Query: " + query
-    result = conversation_chain({"question": full_query})
+    full_query = "Given the query below, search for the answer and return in bullet points if possible and make your response concise. Return the answer back in the same language as the query. ' Query: " + query
+    result = scam_phishing_conversation_chain({"question": full_query})
     answer = result["answer"]
 
     return jsonify({"answer": answer})
@@ -110,5 +106,5 @@ def predict():
     return jsonify({"predicted_label": label_mapping_inverse[predicted_label[0]]})
 
 if __name__ == '__main__':
-    #app.run(host="0.0.0.0", port=5000, debug=False)
-    pass
+    app.run(host="0.0.0.0", port=5000, debug=True)
+    #pass

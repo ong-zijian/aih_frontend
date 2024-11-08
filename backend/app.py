@@ -1,7 +1,7 @@
 import os
 import joblib
-import faiss
-import sklearn
+# import faiss
+# import sklearn
 
 from flask_cors import CORS
 from langchain_community.document_loaders import TextLoader

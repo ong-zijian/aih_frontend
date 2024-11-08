@@ -9,3 +9,4 @@ langchain-openai
 joblib
 scikit-learn
 gunicorn
+six

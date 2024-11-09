@@ -22,6 +22,7 @@ const ScamCheckerChats: React.FC<Props> = (props) => {
   const [messages, setMessages] = useState<MessagesInfo[]>([]);
   const dummyRef = useRef<HTMLDivElement>(null);
   const bodyRef = useRef<HTMLDivElement>(null);
+  const [messageCount, setMessageCount] = useState(1); 
 
 
   // Initial message handling
@@ -40,6 +41,7 @@ const ScamCheckerChats: React.FC<Props> = (props) => {
   // Push the user's response to messages if available and not already present
   useEffect(() => {
     if (props.sendUserResponse && !messages.some(msg => msg.message === props.sendUserResponse && msg.sender === "user")) {
+      
       setMessages((prevMessages) => [
         ...prevMessages,
         { message: props.sendUserResponse, sender: "user" },

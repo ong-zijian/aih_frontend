@@ -12,6 +12,7 @@ const ScamChecker: React.FC = () => {
     //const [step, setStep] = useState<number>(0);
     const [botResponse, setBotResponse] = useState<ResponseBotObject>({ predicted_label: "" });
     const [sendUserResponse, setSendUserResponse] = useState<string>("");
+    const [messageCount, setMessageCount] = useState(0); 
 
     // const  testPredictScam = async (message: string) => {
     //     //const messages = "This is a test message";
@@ -36,9 +37,10 @@ const ScamChecker: React.FC = () => {
         console.log("test", predictedLabel)
         const explanationMessage = explanation[predictedLabel.predicted_label as keyof typeof explanation];
         const defaultMessage = {
-            predicted_label: `Your message category is ${predictedLabel.predicted_label}. This means that ${explanationMessage}\n\nDo check again with other sources like ScamShield to verify and help add to the database of scams.\nVisit [ScamShield](https://www.scamshield.gov.sg/) for more information.`
+            predicted_label: `#${messageCount}\n\nYour message category is ${predictedLabel.predicted_label}. This means that ${explanationMessage}\n\nDo check again with other sources like ScamShield to verify and help add to the database of scams.\nVisit [ScamShield](https://www.scamshield.gov.sg/) for more information.`
         };
         setBotResponse(defaultMessage);
+        setMessageCount((count) => count + 1);
         });
     };
 

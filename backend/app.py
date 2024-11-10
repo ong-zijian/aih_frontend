@@ -68,7 +68,7 @@ def ask():
     if not query:
         return jsonify({"error": "Question is required."}), 400
 
-    full_query = "Given the query below, search for the answer and return. If the answer has only 1 answer, return the answer. Else if the answer has multiple answers, follow up with another question providing the options in numbers and await for the option to be selected, then give the answer in the next prompt. Return the answer back in the same language as the query. When giving long answers, give the short 2 sentence summary, create a h2 header then show full steps or detailed answers. Query: " + query
+    full_query = "Given the query below, search for the answer. If the query has only 1 answer, return the answer. Else if the query has multiple answers, follow up with another question providing the options in numbers and await for the option to be selected, then give the answer in the next prompt. Return the answer in a concise manner and in the same language as the query. Query: " + query
     result = conversation_chain({"question": full_query})
     answer = result["answer"]
 
@@ -81,7 +81,7 @@ def ask_scam_phishing():
     if not query:
         return jsonify({"error": "Question is required."}), 400
 
-    full_query = "Given the query below, search for the answer and return in bullet points if possible and make your response concise. Return the answer back in the same language as the query. ' Query: " + query
+    full_query = "Given the query below, search for the answer and keep response concise, if there are points, return those parts in bullet points. If the query is asking for you to check if it sounds like scam, then help to determine it based on what you can infer. Return the answer back in the same language as the query. ' Query: " + query
     result = scam_phishing_conversation_chain({"question": full_query})
     answer = result["answer"]
 
@@ -107,6 +107,6 @@ def predict():
 
 if __name__ == '__main__':
     # for local development 
-    #app.run(host="0.0.0.0", port=5000, debug=True)
+    # app.run(host="0.0.0.0", port=5000, debug=True)
     # for production
     pass
